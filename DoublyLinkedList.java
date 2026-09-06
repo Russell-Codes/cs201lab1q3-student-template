@@ -115,6 +115,22 @@ public class DoublyLinkedList<E> {
     }
 
     public void group(){
+        // criterion, there can never be a null after a numerical value. swap values instead of nodes
 
+        boolean swapped = true;
+        while(swapped){
+            swapped = false;
+            Node<E> nextElement = header.getNext();
+            while(nextElement.getNext() != trailer && nextElement != trailer){
+                E leftValue = nextElement.getElement();
+                E rightValue = nextElement.getNext().getElement();
+                if(leftValue != null && rightValue == null){
+                    nextElement.element = rightValue;
+                    nextElement.getNext().element = leftValue;
+                    swapped = true;
+                }
+                nextElement = nextElement.getNext();
+            }
+        }
     }
 }
