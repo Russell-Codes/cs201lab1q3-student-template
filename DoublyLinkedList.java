@@ -9,7 +9,7 @@ public class DoublyLinkedList<E> {
             element = e;
             prev = p;
             next = n;
-        }
+        } 
     
         public E getElement(){
             return element;
