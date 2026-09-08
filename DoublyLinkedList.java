@@ -115,7 +115,6 @@ public class DoublyLinkedList<E> {
     }
 
     public void group(){
-        // criterion, there can never be a null after a numerical value. swap values instead of nodes
 
         boolean swapped = true;
         while(swapped){
